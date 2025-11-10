@@ -1,5 +1,7 @@
 import streamlit as st
-
+def main():
+    st.title("Welcome to QuickFix!")
+    st.write("This is the Home page.")
 # Sidebar TOC
 with st.sidebar:
     st.header("🧭 Navigation")
