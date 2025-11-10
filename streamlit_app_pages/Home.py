@@ -12,8 +12,6 @@ Need a job done fast, with no long-term contract? We’re your go-to for quick, 
 
 """)
 
-# Image
-st.image("assets/workers.jpg", caption="QuikFix in Action", use_container_width=True)
 
 # Services
 st.markdown("## 🔨 Services Offered")
