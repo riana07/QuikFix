@@ -1,7 +1,7 @@
 import streamlit as st
 
 st.set_page_config(page_title="Home", page_icon="🏠")
-st.title("🏠 Welcome to Quick Contractor Services")
+st.title("🏠 Welcome to QuikFix Contractor Services")
 
 st.markdown("""
 Need a job done fast, with no long-term contract?
