@@ -1,5 +1,18 @@
 import streamlit as st
 
+# Sidebar TOC
+with st.sidebar:
+    st.header("🧭 Navigation")
+    st.markdown("""
+    - [🏠 Home](#home)
+    - [🛠️ Services](#services)
+    - [📬 Inquiry](#inquiry)
+    - [🧰 Admin](#admin)
+    - [💬 Q&A](#q-a)
+    - [⭐ Reviews](#reviews)
+    """, unsafe_allow_html=True)
+
+
 st.set_page_config(page_title="Home", page_icon="🏠")
 
 st.title("🏠 Welcome to QuikFix Contractor Services")
