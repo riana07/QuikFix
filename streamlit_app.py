@@ -49,8 +49,8 @@ st.markdown("---")
 
 # 7. ROUTING LOGIC
 if st.session_state.current_page == "Home":
-    st.header("🏠 Welcome to QuikFix")
-    st.markdown("Fast, reliable help for home & business jobs. Book trusted pros with no long-term contracts.")
+    from views import home
+    home.show_view()  # You’ll define this
 
 elif st.session_state.current_page == "Services":
     from views import services
