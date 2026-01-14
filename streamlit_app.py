@@ -1,13 +1,19 @@
 import streamlit as st
-from streamlit_option_menu import option_menu
 import importlib
 
-# Page selection menu in sidebar
-with st.sidebar:
-    selected = option_menu("Pages", ["Home", "Services", "Inquiry", "QandA", "Reviews", "Admin"],
-        icons=['house', 'gear', 'envelope', 'question-circle', 'star', 'lock'],
-        menu_icon="cast", default_index=0)
+PAGES = {
+    "Home": "Home",
+    "Services": "Services",
+    "Inquiry": "Inquiry",
+    "QandA": "QandA",
+    "Reviews": "Reviews",
+    "Admin": "Admin",
+}
 
-# Dynamically import and run the selected module
-page_module = importlib.import_module(f"streamlit_app_pages.{selected}")
+st.sidebar.title("Pages")
+selection = st.sidebar.radio("Go to", list(PAGES.keys()))
+
+module_name = PAGES[selection]
+page_module = importlib.import_module(f"streamlit_app_pages.{module_name}")
+
 page_module.main()
